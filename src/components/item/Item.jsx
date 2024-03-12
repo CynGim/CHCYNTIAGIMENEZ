@@ -1,22 +1,15 @@
-import React from 'react'
+import React from "react";
+import Item from '../item/Item';
 
-const Item = ({prod}) => {
-  return (
-      <div className='card'style={{width:'20rem'}}>
-      <div className='tittle'>
-      <p className='text'>{prod.name}</p>
-        </div>
-      <img src={prod.imagen} alt={prod.name} className='card-img-top'/>
-        <div className='card-body'>
-            <p className='card-text'>{prod.description}</p>
-        </div>
-        <div className='card-price'>
-            <p className='card-price'>€{prod.price}</p>
-        </div>
-
-        <button className='btn btn-dark'>Agregar al carrito</button>
+const ItemList = ({products}) =>{
+//creo map
+    return (
+        <div className="d-flex justify-content-between align-item-center flex-wrap ">
+        {products.map((prod)=> <Item key={prod.id} prod={prod}/>)}
     </div>
-  )
+    )
 }
 
-export default Item
+
+
+export default ItemList

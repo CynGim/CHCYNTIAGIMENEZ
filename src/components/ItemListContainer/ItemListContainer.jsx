@@ -2,7 +2,7 @@ import React from 'react'
 //hook
 import{useState, useEffect} from 'react'
 import { getProducts } from '../../mock/data'
-import ItemList from '../itemList/itemList'
+import ItemList from '../itemList/ItemList'
 
 function ItemListContainer({greeting}) {
   const [products, setProducts] = useState ([])
