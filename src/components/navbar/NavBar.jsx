@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cardWidget/CartWiget';
 
 function Navegacion() {
-  console.log ('soy NavnavBar y me renderice')
+  
   return (
     <Navbar bg="dark" data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>

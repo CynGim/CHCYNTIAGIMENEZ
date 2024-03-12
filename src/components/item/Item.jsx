@@ -14,7 +14,7 @@ const Item = ({prod}) => {
             <p className='card-price'>€{prod.price}</p>
         </div>
 
-        <button className='btn btn-dark'>Más Información</button>
+        <button className='btn btn-dark'>Agregar al carrito</button>
     </div>
   )
 }
