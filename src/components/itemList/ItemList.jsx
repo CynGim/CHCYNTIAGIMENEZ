@@ -1,5 +1,5 @@
 import React from "react";
-import Item from '../components/item/Item'
+import Item from '../item/Item';
 
 const ItemList = ({products}) =>{
 //creo map
@@ -9,5 +9,8 @@ const ItemList = ({products}) =>{
     </div>
     )
 }
+
+
+
 
 export default ItemList
