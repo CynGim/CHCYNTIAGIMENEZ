@@ -4,11 +4,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../cardWidget/CartWiget';
 
-function CollapsibleExample() {
+function Navegacion() {
+  console.log ('soy NavnavBar y me renderice')
   return (
     <Navbar bg="dark" data-bs-theme="dark" collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Pro-Shop Tennis</Navbar.Brand>
+        <Navbar.Brand href="#home"> Pro-Shop Tennis </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -29,4 +30,4 @@ function CollapsibleExample() {
   );
 }
 
-export default CollapsibleExample;
+export default Navegacion;

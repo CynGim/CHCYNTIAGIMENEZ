@@ -1,15 +1,20 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //import Button from 'react-bootstrap/Button';
-import CollapsibleExample from './components/navbar/NavBar.jsx'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+import NavnavBar from './components/navbar/NavBar.jsx'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div>
-        <CollapsibleExample/> 
-        <ItemListContainer greeting="Bienvenidos a Pro-Shop Tennis"/> 
-    </div>
+    <BrowserRouter>
+        <NavnavBar/> 
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting="🥎Bienvenidos a Pro-Shop Tennis🥎"/> }/>
+          <Route path='item' element={<ItemDetailContainer/>}/>
+        </Routes>
+    </BrowserRouter>
   );
 }
 
