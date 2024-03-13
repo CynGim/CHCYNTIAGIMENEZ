@@ -40,9 +40,15 @@
   }
 }
 .detail{
-  color: whitesmoke;
+  color: black;
 }
-
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin: 10px;
+}
 
 .card-img-top{
   width: 9%;
