@@ -16,12 +16,12 @@ function Navegacion() {
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to='ofertas'>Ofertas</Nav.Link>
             <Nav.Link as={NavLink} to='destacados'>Destacados</Nav.Link>
-            <NavDropdown as={NavLink} to='category/producto'title="Productos" id="collapsible-nav-dropdown">
-              <NavDropdown.Item as={NavLink} to='babolat' >Babolat</NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='head'>
+            <NavDropdown as={NavLink} to='productos/category'title="Productos" id="collapsible-nav-dropdown">
+              <NavDropdown.Item as={NavLink} to='category/babolat' >Babolat</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='category/head'>
                 Head
               </NavDropdown.Item>
-              <NavDropdown.Item as={NavLink} to='wilson'>Wilson</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to='category/wilson'>Wilson</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <CartWidget counter = {10} />
