@@ -10,18 +10,18 @@ import { CartProvider } from './context/CartContext.jsx';
 function App() {
 
   return (
-    <BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
         <NavnavBar/> 
-        <CartProvider>
-        <Routes>
-          <Route path='/' element={ <ItemListContainer greeting="Bienvenidos a Pro-Shop Tennis"/>}/>
-          <Route path='/category/:categoryId'element={<ItemListContainer/>}/>
-          <Route path='item/:itemId' element={<ItemDetailContainer/>}/>
-          <Route path='/cart' element={<Cart/>}/>
-          <Route path='*' element={<h2>404: Error de pagina</h2>}/>
-        </Routes>
-        </CartProvider>
-    </BrowserRouter>
+          <Routes>
+            <Route path='/' element={ <ItemListContainer greeting="Bienvenidos a Pro-Shop Tennis"/>}/>
+            <Route path='/category/:categoryId'element={<ItemListContainer/>}/>
+            <Route path='item/:itemId' element={<ItemDetailContainer/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='*' element={<h2>404: Error de pagina</h2>}/>
+          </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

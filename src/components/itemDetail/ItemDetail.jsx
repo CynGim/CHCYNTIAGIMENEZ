@@ -5,11 +5,16 @@ import { CartContext } from '../../context/CartContext'
 
 const ItemDetail = ({productDetail,}) => {
   const[purchase, setPurchase]= useState(false)
-  const contexto = useContext(CartContext)
+  const {addItem, itemQuantity } = useContext(CartContext)
+
   const onAdd = (cantidad) =>{
-    console.log('Su compra ha sido realizada', cantidad)
+
+
+    addItem(productDetail, cantidad)
     setPurchase(true)
   }
+
+  const stockInCart = itemQuantity(productDetail.id)
   return (
     <div>
         <h3>{productDetail.name}</h3>
@@ -17,7 +22,7 @@ const ItemDetail = ({productDetail,}) => {
         <p>{productDetail.description}</p>
         <p className='price'>€{productDetail.price}</p>
         {purchase ? <Link className='btn btn-success' to='cart'>Ir al carrito </Link>
-        : <ItemCount stock={productDetail.stock} onAdd={onAdd}/>}
+        : <ItemCount stock={productDetail.stock - stockInCart } onAdd={onAdd}/>}
     </div>
   )
 }
