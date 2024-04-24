@@ -9,7 +9,7 @@ const CartWidget = ({counter}) => {
     return(
         <>
         <FaShoppingCart color="white" fontSize={'1.5rem'}/>
-        {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}
+        {cartQuantity() > 0 && <Badge bg="danger">{cartQuantity()}</Badge>}''
         </>
     )
 }

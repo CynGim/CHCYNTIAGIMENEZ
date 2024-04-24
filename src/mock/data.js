@@ -2,7 +2,7 @@ const productos = [
     {
         id: '1',
         name: 'Head Prestige',
-        category:'Head',
+        category:'head',
         description:'Head Prestige 315Gr',
         imagen:'/img/head3.webp',
         price: 199,

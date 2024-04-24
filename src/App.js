@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/itemDetailContainer/ItemDetailCont
 import { BrowserRouter,Routes,Route} from 'react-router-dom';
 import Cart from "./components/cardWidget/CartWiget.jsx"
 import { CartProvider } from './context/CartContext.jsx';
+import Checkout from './components/checkout/Checkout.jsx';
 function App() {
 
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/category/:categoryId'element={<ItemListContainer/>}/>
             <Route path='item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
             <Route path='*' element={<h2>404: Error de pagina</h2>}/>
           </Routes>
       </BrowserRouter>
